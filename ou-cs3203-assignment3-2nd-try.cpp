@@ -1,3 +1,4 @@
+// Abraham Artus - Software engineering - Homework 3
 #include <iostream>
 #include  <vector>
 using namespace std;
@@ -14,6 +15,7 @@ int main() {
     // prompt user to enter Integers
     cout << "Enter vectors numbers seperated by spaces, end seq. with E:";
     int n;
+    // itterate till we hit a non integer
     while (cin >> n) {  
         list.push_back(n);  
     }
@@ -37,6 +39,7 @@ int main() {
 }
 
 void printvec(vector<int> arr) {
+    // itterate throught the vector printing each element
     for (int i = 0; i < arr.size(); i++) {
         cout << arr[i] << " ";
     }
