@@ -5,6 +5,7 @@ using namespace std;
 int sumList(vector<int> arr);
 int multiplyList(vector<int> arr);
 void printvec(vector<int> arr);
+vector<int> reverse(vector<int> vec);
 
 int main() {
     // init vector to be used
@@ -26,6 +27,13 @@ int main() {
 
     // vector multiplied together
     cout << "Product of the Vector Integers: " << multiplyList(list) << endl;
+
+    // reverse and print the array 
+    cout << "Reversed Vector: ";
+    vector<int> rever = reverse(list);
+    printvec(rever);
+
+    return 0;
 }
 
 void printvec(vector<int> arr) {
@@ -54,4 +62,16 @@ int multiplyList(vector<int> arr) {
         prod = arr[i]*prod;
     }
     return prod;
+}
+
+// return the reversed vector
+vector<int> reverse(vector<int> vec){
+    int temp = 0;
+    for (int i = 0; i < (vec.size() / 2); i++) {
+        temp = vec[i];
+        vec[i] = vec[vec.size()-1 -i];
+        vec[vec.size()-1 -i] = temp;
+    }
+    return vec;
+
 }
