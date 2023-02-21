@@ -27,6 +27,13 @@ int main() {
 
     // vector multiplied together
     cout << "Product of the Vector Integers: " << multiplyList(list) << endl;
+
+    // reverse and print the array 
+    cout << "Reversed Vector: ";
+    vector<int> rever = reverse(list);
+    printvec(rever);
+
+    return 0;
 }
 
 void printvec(vector<int> arr) {
